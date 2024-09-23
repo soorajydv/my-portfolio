@@ -195,7 +195,8 @@ form button:hover {
 
     .profile-box,
     .content-box {
-        width: 100%;
+        width: 85%;
+        min-height: min-content;
     }
 
     .profile-box {
