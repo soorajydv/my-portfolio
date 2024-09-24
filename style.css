@@ -354,3 +354,8 @@ form button:hover {
     color: #e4405f;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
