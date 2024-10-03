@@ -1,0 +1,24 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches:
+      - main  # or your deployment branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Inject API Key into JS
+        run: |
+          sed -i "s/SMTP_PASSWORD/${{ secrets.SMTP_PASSWORD }}/" index.js
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./  # assuming your site files are in the root directory
