@@ -104,23 +104,29 @@
                 
             </div>
             <div class="content" id="contact">
-                <form action="https://formsubmit.co/3f9800df8d7dc59af3701727ac658e29" method="POST">
+                <form  onsubmit="emailSend(); reset(); return false;">
                     <h1>Contact Me</h1><br><br>
+                    
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name"><br><br>
+                    
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email"><br><br>
+                    
                     <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea>
+                    <textarea id="message" name="message"></textarea><br><br>
+                    
                     <button type="submit">Submit</button>
                 </form>
-                <div class="map">
-                    <!-- Embed your map here -->
-                </div>
+                <!-- <div class="map">
+                </div> -->
             </div>
         </div>
     </div>
-    
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
     <script src="index.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
 </body>
 </html>

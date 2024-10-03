@@ -12,3 +12,23 @@ function showContent(sectionId) {
 
 // Show the 'About' section by default
 showContent('about');
+
+function emailSend(){
+	var userName = document.getElementById('name').value;
+	var message = document.getElementById('message').value;
+	var email = document.getElementById('email').value;
+
+	var messageBody = "Name " + userName + "<br/> message " + message + "<br/> Email " + email;
+
+	Email.send({
+    Host : "smtp.gmail.com",
+    Username : "soorajydv9@gmail.com",
+    Password : "SMTP_PASSWORD",
+    To : 'soorajydv9@gmail.com',
+    From : "email",
+    Subject : "This is the subject",
+    Body : messageBody
+}).then(
+  message => alert(message)
+);
+}
