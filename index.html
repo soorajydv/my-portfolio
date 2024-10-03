@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 
 </head>
+
 <body>
     <div class="container">
         <!-- Profile Box -->
@@ -31,22 +33,25 @@
                         </button>
                     </a>
                 </div>
-                
+
                 <div class="social">
                     <ul class="social-icons">
-                        <li><a href="https://github.com/soorajydv/"><i class="fab fa-github" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.facebook.com/ydvsooraj/"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="https://www.instagram.com/ydvsooraj/"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+                        <li><a href="https://github.com/soorajydv/"><i class="fab fa-github" aria-hidden="true"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/ydvsooraj/"><i class="fab fa-facebook"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a href="https://www.instagram.com/ydvsooraj/"><i class="fab fa-instagram"
+                                    aria-hidden="true"></i></a></li>
                     </ul>
                 </div>
-                
+
                 <div class="contact">
                     <div>
                         <p><strong>Email:</strong> soorajydv9@gmail.com</p>
                         <p><strong>Phone:</strong> +977 9819865988</p>
                         <p><strong>Location:</strong> Bhaktapur, Nepal</p>
                     </div>
-                
+
                 </div>
             </div>
         </div>
@@ -59,16 +64,18 @@
                 <button class="nav-button" onclick="showContent('projects')">Projects</button>
                 <button class="nav-button" onclick="showContent('contact')">Contact</button>
             </div>
-            <hr width="100%" /> 
+            <hr width="100%" />
             <div class="content" id="about">
                 <h2>About Me</h2>
-                <p>I am a Bachelor in Computer Science Engineering at Pokhara University. I have experience in web development and various programming languages such as C, Python, JavaScript, and more. I have completed few projects using Django, Node Js, Express Js, Postgresql</p><br>
+                <p>I am a Bachelor in Computer Science Engineering at Pokhara University. I have experience in web
+                    development and various programming languages such as C, Python, JavaScript, and more. I have
+                    completed few projects using Django, Node Js, Express Js, Postgresql</p><br>
                 <p><a href="https://github.com/soorajydv" target="_blank">Visit my GitHub</a></p>
             </div>
-            
-            
+
+
             <div class="content" id="resume">
-                
+
                 <h3>Education</h3>
                 <ul>
                     <li>Bachelor in Computer Science Engineering - Pokhara University</li>
@@ -86,9 +93,9 @@
                     <li>Python, JavaScript, C, C++, Linux</li>
                 </ul>
             </div>
-            
+
             <div class="content" id="projects">
-                
+
                 <div class="project-card">
                     <img src="./media/otbs.png" alt="">
                     <h2>Ticket Booking Website</h2>
@@ -101,32 +108,26 @@
                     <img src="./media/mindmorph.png" alt="">
                     <h2>Backend for Mobile App</h2>
                 </div>
-                
+
             </div>
             <div class="content" id="contact">
-                <form  onsubmit="emailSend(); reset(); return false;">
+                <form id="contact-form"> 
                     <h1>Contact Me</h1><br><br>
-                    
+
                     <label for="name">Name</label>
-                    <input type="text" id="name" name="name"><br><br>
-                    
+                    <input type="text" id="name" name="name" required><br>
+
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email"><br><br>
-                    
+                    <input type="email" id="email" name="email" required><br>
+
                     <label for="message">Message</label>
-                    <textarea id="message" name="message"></textarea><br><br>
-                    
+                    <textarea id="message" name="message" required></textarea><br>
+
                     <button type="submit">Submit</button>
                 </form>
-                <!-- <div class="map">
-                </div> -->
             </div>
-        </div>
-    </div>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script src="index.js"></script>
-    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
-	
+            <script src="index.js"></script>
+            <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </body>
+
 </html>
